@@ -1,0 +1,117 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #121212; /* Dark mode background */
+    color: #ffffff;
+}
+
+/* Main Heading */
+h1 {
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sections (Round Selection, Buttons, Game Info, Result Section) */
+#round-selection, #buttons, #game-info, #result-section {
+    background-color: #1e1e1e;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    width: 500px; /* Fixed width for desktop */
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Buttons */
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Unique Button Styles for Rock, Paper, Scissors */
+#buttons button {
+    background-color: #ff6f61;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    width: 130px; /* Increase width for text */
+    height: 60px; /* Increase height for balance */
+    margin: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#buttons button:hover {
+    background-color: #ff4c3b;
+    transform: scale(1.1); /* Animation for button hover */
+}
+
+/* Game Info Section */
+#game-info p {
+    margin: 5px 0;
+}
+
+/* Result Section */
+#result-section {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+#round-result {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Input for Rounds Selection */
+input[type="number"] {
+    width: 80%;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .container {
+        width: 100%; 
+    }
+
+    #round-selection, #buttons, #game-info, #result-section {
+        width: 90%; /* Adjust to take up most of the screen */
+        margin: 10px auto; /* Centered on screen */
+    }
+
+    button {
+        width: 80%;
+        padding: 15px;
+    }
+
+    input[type="number"] {
+        width: 95%;
+    }
+}

@@ -4,8 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        
+        <!-- Section to input number of rounds -->
+        <div id="round-selection">
+            <label for="rounds">Select Number of Rounds (1-20): </label>
+            <input type="number" id="rounds-input" min="1" max="20" placeholder="Select 1 to 20">
+            <div id="round-selection-buttons">
+                <button id="start-game-button">Start Game</button>
+                <button id="reset-game-button">Reset Game</button>
+            </div>
+        </div>
+
+        <!-- Game buttons for player selection -->
+        <div id="buttons">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+        </div>
+
+        <!-- Div to display game progress and results -->
+        <div id="game-info">
+            <p>Total Rounds: <span id="total-rounds">0</span></p>
+            <p>Current Round: <span id="current-round">0</span></p>
+            <p>Human: <span id="human-score">0</span> | Computer: <span id="computer-score">0</span></p>
+            <p>Rounds Tied: <span id="tied-rounds">0</span></p>
+        </div>
+
+        <!-- Div to display the result -->
+        <div id="result-section">
+            <p id="round-result">No rounds played yet.</p>
+            <p id="winner-announcement">Start a new game.</p>
+        </div>
+
+        <script src="script.js"></script>
+    </div>
 </body>
 </html>
