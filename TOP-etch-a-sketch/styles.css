@@ -1,0 +1,128 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    min-height: 100vh;si
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #E5E5E6;
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+/* Layout styling */
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Controls styling */
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center; /* Center-align all controls */
+    height: 100%;
+    padding: 20px;
+}
+
+button, input[type="color"] {
+    background-color: #4CAF50;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    width: 150px; /* Increase width for text */
+    height: 60px; /* Increase height for balance */
+    margin: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover, input[type="color"]:hover {
+    background-color: #45a049;
+    transform: scale(1.1); /* Animation for button hover */
+}
+
+/* Modify color picker to be circular and center-aligned */
+input[type="color"] {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%; /* Make it circular */
+    border: none; /* Remove border */
+    padding: 0;
+    margin: 0;
+    appearance: none; /* Remove default browser appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent; /* Ensure no background color is applied */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: 2px solid white; /* Remove default border of the color swatch */
+    border-radius: 50%; /* Ensure the color is displayed circular */
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0; /* Remove padding around the color swatch */
+    border-radius: 50%; /* Make sure the wrapper is circular */
+}
+/* Grid styling */
+.grid {
+    display: grid;
+    /* gap: 1px; */
+    width: 512px;  /* Fixed grid width */
+    height: 512px; /* Fixed grid height */
+    /* background-color: #333;
+    border: 1px solid #444;
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.5); */
+    overflow: hidden;  /* Prevent overflow beyond the grid container */
+}
+
+.grid-cell {
+    background-color: white;
+    transition: background-color 0.1s;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .controls {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    button, input[type="color"] {
+        flex: 1 1 40%;
+        margin: 2px;
+    }
+
+    .grid {
+        max-width: 90vw;
+        max-height: 90vw;
+    }
+}

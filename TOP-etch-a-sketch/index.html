@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro-Sketch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Retro-Sketch</h1>
+        <div class="main-content">
+            <div class="controls">
+                <input type="color" id="colorPicker" value="#333333">
+                <button id="colorMode">Color Mode</button>
+                <button id="rainbowMode">Rainbow Mode</button>
+                <button id="eraserMode">Eraser</button>
+                <button id="clearGrid">Clear</button>
+                <!-- <button id="resizeGrid">Resize Grid</button> -->
+                <span id="gridSizeValue">16 x 16</span>
+                <input type="range" id="gridSizeSlider" min="1" max="64" value="16">
+            </div>
+            <div id="grid" class="grid"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
